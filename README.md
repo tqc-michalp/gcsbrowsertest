@@ -1,24 +1,12 @@
-# README
+## gcsbrowsertest
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## METADATA
 
-* Ruby version
+* Project name: gcsbrowsertest
+* Owner: tqc-michalp
+* License: It is a property of [Thinqcraft](https://www.thinqcraft.com/). All rights reserved.
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## ABOUT
+The objective of this application is to develop a user-friendly frontend for a Google Cloud storage bucket. The user interface (UI) should facilitate effortless navigation through the storage bucket and enable users to easily view and download files.
