@@ -1,24 +1,12 @@
-# README
+## gcsbrowsertest
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## METADATA
 
-* Ruby version
+* Project name: gcsbrowsertest
+* Owner: Createview AS
+* License: It is a property of [[Createview AS]](https://createview.ai/). All rights reserved.
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## ABOUT
+gcsbrowsertest is a simple frontend to a Gogle Cloud Storage bucket.
