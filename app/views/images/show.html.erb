@@ -1,0 +1,10 @@
+<div class="flex flex-col ">
+  <div class="flex justify-left">
+    <%= link_to 'Link to index images', images_path %>
+  </div>
+  <div class="flex flex-row justify-center">
+    <div class="bg-indigo-300">
+      <%= image_tag @image.signed_url, class: "h-192 w-192" %>
+    </div>
+  </div>
+</div>
