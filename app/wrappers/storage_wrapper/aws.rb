@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module RemoteStorage
-  class AwsStorage
+class StorageWrapper
+  class Aws
     def initialize
       raise NotImplementedError, "#{self.class.name} lack of implementation"
     end

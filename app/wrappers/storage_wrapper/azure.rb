@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module RemoteStorage
-  class AzureStorage
+class StorageWrapper
+  class Azure
     def initialize
       raise NotImplementedError, "#{self.class.name} lack of implementation"
     end

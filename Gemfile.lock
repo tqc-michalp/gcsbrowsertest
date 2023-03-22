@@ -161,6 +161,7 @@ GEM
     nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
     os (1.1.4)
+    pagy (6.0.2)
     pg (1.4.6)
     propshaft (0.7.0)
       actionpack (>= 7.0.0)
@@ -264,6 +265,7 @@ DEPENDENCIES
   dotenv-rails
   google-cloud-storage
   importmap-rails
+  pagy
   pg
   propshaft
   puma
