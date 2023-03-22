@@ -8,6 +8,10 @@ class ImageFacade
       @img = img
     end
 
+    def name_url_safe_encoded
+      raise NotImplementedError, "#{self.class.name} must implement #{__method__}"
+    end
+
     def signed_url
       raise NotImplementedError, "#{self.class.name} must implement #{__method__}"
     end

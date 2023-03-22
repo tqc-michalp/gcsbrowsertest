@@ -8,4 +8,12 @@ class ImagesController < ApplicationController
 
     @pagy, @images = pagy_array(collection)
   end
+
+  def show
+    @image = ImageFacade.new(
+      StorageWrapper.new.fetch_by_file_name(
+        Base64.urlsafe_decode64(params[:name])
+      )
+    )
+  end
 end
