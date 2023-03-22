@@ -10,3 +10,16 @@
 
 ## ABOUT
 gcsbrowsertest is a simple frontend to a Gogle Cloud Storage bucket.
+
+
+## DECISIONS
+
+
+#### CORE LOGIC
+
+1. n/a
+
+
+#### PATTERNS
+
+1. Wrapper dir to keep objects calling external APIs,
