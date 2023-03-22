@@ -8,6 +8,7 @@ require_relative '../config/environment'
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 require 'vcr'
+require 'webmock/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -33,9 +34,11 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 
-VCR.configure do |config|
-  config.cassette_library_dir = 'fixtures/vcr_cassettes'
-  config.hook_into :webmock
+VCR.configure do |cfg|
+  cfg.allow_http_connections_when_no_cassette = true
+  cfg.cassette_library_dir = "#{::Rails.root}/spec/fixtures/cassettes"
+  cfg.hook_into :webmock
+  cfg.filter_sensitive_data('<GOOGLE_CLOUD_STORAGE_API_KEY>') { ENV['GOOGLE_CLOUD_STORAGE_API_KEY'] }
 end
 
 RSpec.configure do |config|
