@@ -1,6 +1,16 @@
 <div class="flex flex-col ">
-  <div class="flex justify-left">
-    <%= link_to 'Link to index images', images_path %>
+  <div>
+    <p>
+      Links to:
+    </p>
+    <ul>
+      <li>
+        <%= link_to 'index images', images_path %>
+      </li>
+      <li>
+        <%= link_to 'download a image', image_path(@image.name_url_safe_encoded, format: :jpeg) %>
+      </li>
+    </ul>
   </div>
   <div class="flex flex-row justify-center">
     <div class="bg-indigo-300">
