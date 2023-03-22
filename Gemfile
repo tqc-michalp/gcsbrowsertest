@@ -11,6 +11,7 @@ gem 'rails', '~> 7.0.4'
 gem 'bootsnap', require: false
 gem 'google-cloud-storage'
 gem 'importmap-rails'
+gem 'pagy'
 gem 'propshaft'
 gem 'redis', '~> 4.0'
 gem 'stimulus-rails'
