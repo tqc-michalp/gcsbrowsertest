@@ -1,6 +1,29 @@
 # frozen_string_literal: true
 
 RSpec.describe StorageWrapper::Gcp do
+  describe '.fetch_by_file_name' do
+    it 'returns image by name' do
+      VCR.use_cassette('storage_wrapper/gcp/fetch_by_file_name') do
+        name = 'deadfish.v1i.yolov82/test/images/image-0000014_jpg.rf.5e7e47014efa831e04fb8f9c343a54a7.jpg'
+        response = subject.fetch_by_file_name(name)
+
+        expect(response).to have_attributes(
+          bucket: 'gcsbrowsertest',
+          content_type: 'image/jpeg',
+          crc32c: '/60YWw==',
+          etag: 'CKzwqr2xvf0CEAE=',
+          generation: 1_677_764_946_737_196,
+          id: 'gcsbrowsertest/deadfish.v1i.yolov82/test/images/image-0000014_jpg.rf.5e7e47014efa831e04fb8f9c343a54a7.jpg/1677764946737196',
+          kind: 'storage#object',
+          metageneration: 1,
+          name:,
+          size: 41_163,
+          storage_class: 'STANDARD'
+        )
+      end
+    end
+  end
+
   describe '.fetch_images' do
     it 'returns all images' do
       VCR.use_cassette('storage_wrapper/gcp/fetch_images') do

@@ -2,6 +2,10 @@
 
 class ImageFacade
   class Gcp < ImageFacadeInterface
+    def name_url_safe_encoded
+      @name_url_safe_encoded ||= Base64.urlsafe_encode64(img.gapi.name)
+    end
+
     def signed_url
       @signed_url ||=
         begin

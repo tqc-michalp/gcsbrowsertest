@@ -16,6 +16,10 @@ class ImageFacade < ApplicationFacade
     end
   end
 
+  def name_url_safe_encoded
+    provider.name_url_safe_encoded
+  end
+
   def signed_url
     provider.signed_url
   end
